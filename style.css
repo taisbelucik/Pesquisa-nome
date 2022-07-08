@@ -1,0 +1,60 @@
+body{
+    margin: 0px;
+    background: rgb(255, 177, 94);
+
+}
+
+
+.pesq-name{
+    margin-left: 30rem;
+    margin-top: 10rem;
+    font-size: 2rem;
+    display: block;
+}
+
+
+
+
+
+label{
+    display: block;
+    margin-bottom: .5rem;
+    margin-top: 1rem;
+    margin-right: 25rem;
+    font-family: 'IBM Plex mono', monospace ;
+   
+}
+
+input{
+ padding: .8rem 5rem;
+ margin-left: 8rem;
+ display: block;
+
+    
+}
+
+#btn-name{
+    font-family: 'IBM Plex mono', monospace ;
+    display:block;
+    margin-top: 2rem;
+    margin-left: 15rem;
+    padding: 0.1rem 1rem;
+    
+}
+
+h2{
+    font-family: 'IBM Plex mono', monospace ;
+    font-size: 1.2rem;
+    display:block;
+    margin-top: 2rem;
+    margin-left: 6rem;  
+}
+
+.result-name{
+    font-family: 'IBM Plex mono', monospace ;
+    font-size: 1.2rem;
+    display:block;
+    margin-top: 2rem;
+
+}
+
