@@ -1,6 +1,6 @@
 const inputName = document.getElementById('txt-name')
 const btnName = document.getElementById('btn-name')
-const resultaName = document.querySelector('.result-name')
+const resultaName = document.querySelector('.result-name ul')
 
 btnName.addEventListener('click', nameClick)
 
@@ -12,21 +12,36 @@ function nameClick(event){
 
 function buscaName(nome) {
     fetch(`https://servicodados.ibge.gov.br/api/v2/censos/nomes/${nome}`)
-    .then(response => response.text())
+    .then(response => response.json())
     .then(body => {
-      resultaName.innerText = body;
+        body.map((item) => {
+         item.res.map((res)=>{
+            console.log(res)
+            const periodo = res.periodo.replace(/\[/g,'')
+            const frequencia = res.frequencia
+
+            const pf = `${periodo} - ${frequencia}`
+            const crt = document.createElement('li') // cria elemento li
+            const textnode= document.createTextNode(pf) // cria texto para colocar no li
+            crt.appendChild(textnode)  // insere o texto no li
+            resultaName.appendChild(crt)
+
+
+           
+
+            
+         })
+
+        })
     })
-  }
+
+    }
+    
+    
+
+     
 
 
-  var intervaloAnosNome = [
-    {'30': null},
-    {'30-40': null},
-    {'40-50': null},
-    {'50-60': null},
-    {'60-70': null},
-    {'70-80': null},
-    {'80-90': null},
-    {'90-200': null},
-    {'200-210': null},
-  ]
+  
+
+
